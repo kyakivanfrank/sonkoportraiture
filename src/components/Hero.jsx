@@ -27,6 +27,14 @@ const Hero = () => {
   return (
     <section id="home" className="overflow-hidden">
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
+
+
+         <h1 className="absolute rotate-90 top-[48%] right-[-5%] inline text-5xl text-[#EAF2FA]">
+            {hero.firstName}
+            <span className="text-dark_primary">{hero.LastName}</span>
+          </h1>
+
+
         <div className="w-full h-[18rem] absolute bottom-0 overflow-hidden silhouetteBg "></div>
 
         <div className="absolute left-[12%] w-[30%] top-[28%]">
@@ -68,12 +76,11 @@ const Hero = () => {
           data-aos-delay="1200"
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10 flex -pr-[25%]  items-center justify-end"
         >
-          <h1 className="inline rotate-90 text-4xl -mr-[30%] text-[#EAF2FA]">
-            {hero.firstName}
-            <span className="text-dark_primary">{hero.LastName}</span>
-          </h1>
+          
         </div>
 
+
+       
 
         <div className="md:h-[32rem] absolute right-[30%] z-[20]">
           <img src={hero.image} data-aos="slide-up" alt="..." className="h-full object-cover" />
