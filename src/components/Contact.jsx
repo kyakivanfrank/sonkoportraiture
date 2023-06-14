@@ -36,21 +36,21 @@ const Contact = () => {
   return (
     <div id="contact">
       <img src={paper} className="w-[150vw] -mb-2" alt="" />
-      <section className="bg-dark_primary py-32 text-white">
-        <div className="container w-[100%] md:w-[80%] px-5 h-fit">
-          <h4 className="subtitle font-bold text-3xl" data-aos="fade-down">
+      <section className="bg-dark_primary py-[7.5rem] text-white">
+        <div className="container md:w-[80%] h-fit">
+          <h4 className="subtitle font-bold text-2xl" data-aos="fade-down">
             {Contact.subtitle}
           </h4>
           <br />
-          <div className="flex gap-10 md:flex-row flex-col">
+          <div className="flex gap-8 md:flex-row flex-col">
             {isEmailSent ? (
-              <p className="text-green-500 mb-4">Email sent successfully!</p>
+              <p className="text-green-500 mb-2">Email sent successfully!</p>
             ) : null}
             <form
               ref={form}
               onSubmit={sendEmail}
               data-aos="fade-up"
-              className="flex-1 flex flex-col gap-5"
+              className="flex-1 flex flex-col gap-3"
             >
               {/* Input Name as same as email js templates values */}
               <input
@@ -58,7 +58,7 @@ const Contact = () => {
                 name="from_name"
                 placeholder="Name"
                 required
-                className="border border-slate-600 p-3 rounded"
+                className="border border-slate-600 p-2 rounded"
                 aria-label="Name"
               />
               <input
@@ -67,17 +67,17 @@ const Contact = () => {
                 pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
                 placeholder="Email Id"
                 required
-                className="border border-slate-600 p-3 rounded"
+                className="border border-slate-600 p-2 rounded"
                 aria-label="Email"
               />
               <textarea
                 name="message"
                 placeholder="Message"
-                className="border border-slate-600 p-3 rounded h-44"
+                className="border border-slate-600 p-2 rounded h-32"
                 required
                 aria-label="Message"
               ></textarea>
-              <button className="px-8 py-3 rounded-lg self-start bg-white text-dark_primary font-bold">
+              <button className="px-4 py-[0.70rem] rounded-lg self-start bg-white text-dark_primary font-bold">
                 Submit
               </button>
             </form>
@@ -106,7 +106,7 @@ const Contact = () => {
                   key={i}
                   data-aos="fade-down"
                   data-aos-delay={i * 430}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-3"
                 >
                   <h4 className="text-white ">{createElement(content.icon)}</h4>
                   <a

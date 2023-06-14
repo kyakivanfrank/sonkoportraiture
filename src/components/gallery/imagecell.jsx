@@ -59,7 +59,7 @@ const Imagecell = ({ img, caption, number }) => {
         className="bottom-2 left-2 rounded-md items-center space-x-1 py-2 px-[10px] faintBlackBG absolute flex flex-row"
       >
         <HeartIcon className="w-3 md:w-4 lg:w-5 text-white" />
-        <span className="text-white text-sm md:text-md lg:text-lg font-semibold">
+        <span className="text-white text-xs md:text-md lg:text-lg font-semibold">
           {Math.floor(Math.random() * (68 - 10 + 1)) + 10}
         </span>
       </button>

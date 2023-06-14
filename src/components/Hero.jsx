@@ -34,22 +34,21 @@ const Hero = () => {
             {Contact.social_media.map((content, i) => (
               <div key={i} data-aos="fade-down" data-aos-delay={i * 430}>
                 <a className="w-fit" href={content.link} target="_blank" rel="noopener noreferrer">
-                  <h3 className="text-[orange] text-3xl mr-4">{createElement(content.icon)}</h3>
+                  <h3 className="text-[orange] text-2xl mr-3">{createElement(content.icon)}</h3>
                 </a>
               </div>
             ))}
           </span>
 
-          <h2>{hero.title}</h2>
+          <h2 className="text-4xl">{hero.title}</h2>
           <br />
-          <h4 className="text-2xl">
+          <h4 className="text-lg -mt-4">
             {hero.sub_title}&nbsp;
             {textList.map((text, index) => (
               <span
                 key={index}
-                className={`absolute transform text-orange-400 font-semibold whitespace-nowrap ${
-                  index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
-                } transition-all duration-500`}
+                className={`absolute transform text-orange-400 font-semibold whitespace-nowrap ${index === currentIndex ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0'
+                  } transition-all duration-500`}
               >
                 {text}.
               </span>
@@ -67,15 +66,16 @@ const Hero = () => {
         <div
           data-aos="slide-left"
           data-aos-delay="1200"
-          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
+          className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10 flex -pr-[25%]  items-center justify-end"
         >
-          <h1 className="rotate-90 absolute top-[50%] right-[-30%] text-5xl text-[#EAF2FA]">
+          <h1 className="inline rotate-90 text-4xl -mr-[30%] text-[#EAF2FA]">
             {hero.firstName}
             <span className="text-dark_primary">{hero.LastName}</span>
           </h1>
         </div>
 
-        <div className="md:h-[47rem] absolute right-[30%] z-[20] h-96">
+
+        <div className="md:h-[32rem] absolute right-[30%] z-[20]">
           <img src={hero.image} data-aos="slide-up" alt="..." className="h-full object-cover" />
           <img src={hero.imageObject} className="absolute right-[-50%] bottom-0 z-[100] slide-in-left" alt="" />
         </div>

@@ -51,9 +51,11 @@ const Gallery = () => {
 
   return (
     <div id="gallery" className={``}>
-      <div className="container w-[98%] md:w-[95%] lg:w-[80%] mx-auto py-6 lg:py-20">
-        <h1 className="font-bold text-3xl text-center lg:text-left lg:text-4xl pb-6 lg:pb-10">MY PORTFOLIO</h1>
-        <div className={images.length > 0 ? `columns-2 md:columns-3 gap-0 lg:columns-4` : `columns-1 md:columns-2 gap-2`}>
+      <div className=" mx-auto py-6 container md:w-[80%] lg:py-[7.5rem]">
+        <h4 className="font-bold text-2xl py-4" data-aos="fade-down">
+          MY PORTFOLIO
+        </h4>
+        <div className={images.length > 0 ? `columns-2 md:columns-3 gap-0 lg:columns-4` : `columns-1 md:columns-2 gap-0`}>
           {images.length > 0 ? (
             images.map(({ id, img, caption }, index) => (
               <Imagecell key={index} id={id} img={img} caption={caption} number={index} />
