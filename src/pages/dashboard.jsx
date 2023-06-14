@@ -5,7 +5,7 @@ import ImageUploader from '../components/dashboard-gallery/image-upload';
 import { getFirestore, collection, getDocs, onSnapshot } from 'firebase/firestore';
 import app from '../services/firebase';
 
-const Dashboard = ({onLogout}) => {
+const Dashboard = ({ onLogout }) => {
 
   const getCurrentTime = () => {
     const now = new Date();
@@ -72,7 +72,7 @@ const Dashboard = ({onLogout}) => {
         <div className="w-[90%] md:w-[80%] mx-auto">
           <div className="flex flex-row">
             <span className="flex-1 text-white text-xl font-bold">{getCurrentTime()}</span>
-            <button className=" text-white" onClick={()=> onLogout()}>
+            <button className=" text-white" onClick={() => onLogout()}>
               <div className="flex flex-row gap-2">
                 <span className="text-white font-semibold">Log out</span>
                 <svg
@@ -101,6 +101,11 @@ const Dashboard = ({onLogout}) => {
               </div>
             </div>
 
+            <h4 className="subtitle font-bold text-md mt-4 text-center text-white" data-aos="fade-down">
+              You can add or remove any photos that are displayed, in the gallery
+              <br/>
+              Make sure you first compress images
+            </h4>
             {/* gallery starts here */}
             <div id="gallery" className={``}>
               <ImageUploader IsOpen={IsOpen} setIsOpen={setIsOpen} images={images} />
