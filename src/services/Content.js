@@ -2,7 +2,9 @@
 import Hero_person from "../assets/images/Hero/hero-sonko.png";
 import Hero_object from "../assets/images/Hero/SonyA7sII1.png";
 
-import pic1 from "../assets/images/Hero/aboutPics/pic1.jpeg";
+import pic2 from "../assets/images/Hero/aboutPics/pic1.jpeg"
+import pic1 from "../assets/images/Hero/aboutPics/pic1.jfif"
+import pic3 from "../assets/images/Hero/aboutPics/baby_showers.webp"
 import person_project from "../assets/images/Hero/aboutImage.webp";
 
 // import icons from react-icons
@@ -59,23 +61,20 @@ export const content = {
     image: person_project,
     project_content: [
       {
-        title: "Gym Website",
-        Sub_title:
-          "Mindful walking is an ancient practice that has gained popularity in recent years as a powerful tool for promoting mental and physical well-being. In our fast-paced and technology-driven world, where distractions are plentiful, the act of walking mindfully allows us to reconnect with ourselves and the present moment.",
-        image: pic1,
+        title: "Photography Journey",
+        sub_title: "Capture the essence of life through the lens. Explore the world of photography and unleash your creativity. From landscapes to portraits, every click tells a unique story.",
+        image: pic1
       },
       {
-        title: "kbdkjblkjb",
-        Sub_title:
-          "Mindful walking is an ancient practice that has gained popularity in recent years. In our fast-paced and technology-driven world, where distractions are plentiful, the act of walking mindfully allows us to reconnect with ourselves and the present moment.",
-        image: pic1,
+        title: "The Art of Visual Storytelling",
+        sub_title: "Photography is a language that speaks directly to the heart. With each frame, you have the power to evoke emotions, freeze moments, and preserve memories for a lifetime.",
+        image: pic2
       },
       {
-        title: "Gy;llndkhckjn;skjm Website",
-        Sub_title:
-          "Mindful walking is an ancient practice that has gained popularity in recent years as a powerful tool for promoting mental and physical well-being. In our fast-paced and technology-driven world, where distractions are plentiful, the act of walking mindfully allows us to reconnect with ourselves and the present moment.",
-        image: pic1,
-      },
+        title: "Through the Lens of Imagination",
+        sub_title: "Step into a world of infinite possibilities. Photography is not just about capturing what's in front of you; it's about seeing beyond the ordinary and embracing the extraordinary.",
+        image: pic3
+      }
     ],
   },
   Contact: {

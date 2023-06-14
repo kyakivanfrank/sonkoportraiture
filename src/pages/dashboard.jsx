@@ -94,17 +94,17 @@ const Dashboard = ({ onLogout }) => {
           </h4>
 
           <div className="flex flex-col">
-            <span className="text-2xl text-[orange] font-bold text-right my-3">Sonko portraiture</span>
+            <span className="text-2xl text-white font-bold text-right my-3">Sonko portraiture</span>
             <div className="bg-white text-dark_primary p-4 rounded-lg shadow-md">
               <div className="flex flex-col gap-2">
                 <span className="text-lg">Number of Images: {numberOfImages}</span>
               </div>
             </div>
 
-            <h4 className="subtitle font-bold text-md mt-4 text-center text-white" data-aos="fade-down">
-              You can add or remove any photos that are displayed, in the gallery
+            <h4 className="font-semibold text-md mt-4 text-center text-[orange]" data-aos="fade-down">
+            You can add or remove any photos that are displayed in the gallery.
               <br/>
-              Make sure you first compress images
+              Make sure you first compress images to at least 900kb or smaller (smaller sizes load quickly)
             </h4>
             {/* gallery starts here */}
             <div id="gallery" className={``}>
