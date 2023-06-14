@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="min-h-screen relative flex md:flex-row flex-col-reverse md:items-end justify-center items-center">
 
 
-         <h1 data-aos="slide-left" data-aos-delay="1500"
+         <h1
          className="absolute rotate-90  top-[45%] right-[-8%] inline text-4xl text-[#EAF2FA]">
             {hero.firstName}
             <span className="text-dark_primary">{hero.LastName}</span>

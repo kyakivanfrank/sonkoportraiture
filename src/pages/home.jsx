@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div className='relative'>
             <a href={link} target="_blank" rel="noopener noreferrer" className="bottom-5 fixed right-5">
-                <h3 className="bg-[green] z-[999] p-4 round text-white text-[2rem]">
+                <h3 className="bg-[green] z-[999] p-[1.2rem] round text-white text-[2rem]">
                     {createElement(icon)}
                 </h3>
             </a>
