@@ -1,7 +1,7 @@
 import { content } from "../services/Content";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import aboutImage from "../assets/images/Hero/aboutImage.webp"
+// import aboutImage from "../assets/images/Hero/aboutImage.webp"
 
 // Import Swiper styles
 import "swiper/css";
@@ -19,7 +19,7 @@ const About = () => {
 
           <br />
         </div>
-        <img src={aboutImage} alt="..." data-aos="fade-right" className="max-w-[23vw] absolute bottom-0 -mb-32 z-[20] min-w-[8rem]" />
+        <img src={Projects.image} alt="..." data-aos="fade-right" className="max-w-[23vw] absolute bottom-0 -mb-32 z-[20] min-w-[8rem]" />
 
         <div className="flex items-center lg:flex-row flex-col-reverse my-20 gap-5">
 
