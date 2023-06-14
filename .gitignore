@@ -1,0 +1,23 @@
+# Directories
+node_modules/
+dist/
+
+# Files
+.env
+
+# IDE / Editor specific files
+.idea/
+.vscode/
+
+# Logs and debugging files
+npm-debug.log*
+
+# macOS specific files
+.DS_Store
+
+# Build and output files
+/build/
+
+# Cache and temporary files
+.cache/
+.temp/
