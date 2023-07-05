@@ -27,7 +27,7 @@ const About = () => {
 
   return (
     <section className="bg-bg_light_primary overflow-y-hidden relative" id="about">
-      <div className="container md:w-[80%] py-[5rem] flex flex-col justify-between">
+      <div className="container px-0 w-[90%] md:w-[80%] py-[5rem] flex flex-col justify-between">
         <div>
          <h4 className=" font-bold text-2xl" data-aos="fade-down">
             {Projects.title}

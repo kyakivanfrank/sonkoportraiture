@@ -36,8 +36,8 @@ const Contact = () => {
   return (
     <div id="contact">
       <img src={paper} className="w-[150vw] -mb-2" alt="" />
-      <section className="bg-dark_primary py-[7.5rem] text-white">
-        <div className="container md:w-[80%] h-fit">
+      <section className="bg-dark_primary lg:py-[7.5rem] md:py-[5rem] py-[3rem] text-white">
+        <div className="container px-0 w-[90%] md:w-[80%] h-fit">
           <h4 className="subtitle font-bold text-2xl" data-aos="fade-down">
             {Contact.subtitle}
           </h4>

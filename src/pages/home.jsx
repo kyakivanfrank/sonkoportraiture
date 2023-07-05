@@ -11,7 +11,12 @@ import { createElement } from 'react'
 const Home = () => {
   const { icon, link } = content.Contact.social_media[2];
 
+  const year = new Date().getFullYear();
+
+  console.log(year)
+
     return (
+      <>
         <div className='relative'>
             <a href={link} target="_blank" rel="noopener noreferrer" className="bottom-5 fixed right-5">
                 <h3 className="bg-[green] z-[999] p-[1.2rem] round text-white text-[2rem]">
@@ -23,23 +28,23 @@ const Home = () => {
             <About />
             <Gallery />
             <Contact />
-            <footer>
 
-
-          <div className="py-2 container md:w-[80%] text-center md:text-left">
-            <h6 className="mb-2 text-2xl">
+        </div>
+        <footer className='py-2 md:py-4 '>
+          <div className=" container px-0 w-[90%] md:w-[80%] text-center md:text-left">
+            <h6 className="text-lg md:text-xl lg:text-2xl ">
               <span className="text-[orange]">SONKO</span>PORTRAITURE
             </h6>
-            <p>codeaprogram © All CopyRights Reserved 2022</p>
+            <p>sonkoportraiture © All CopyRights Reserved {year} </p>
           </div>
-          <div className="text-center p-2 ">
+          <div className="text-center container px-0 w-[90%] md:w-[80%] lg:text-right">
             <span className="text-xs">Developed by </span>
             <a href="https://frankkyakusse.com" className=" text-[orange] hover:underline">
               studioFrank
             </a>
           </div>
         </footer>
-        </div>
+        </>
     )
 }
 
