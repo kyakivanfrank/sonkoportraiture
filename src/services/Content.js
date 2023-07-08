@@ -6,6 +6,7 @@ import pic2 from "../assets/images/Hero/aboutPics/pic1.jpeg"
 import pic1 from "../assets/images/Hero/aboutPics/pic1.jfif"
 import pic3 from "../assets/images/Hero/aboutPics/baby_showers.webp"
 import person_project from "../assets/images/Hero/aboutImage.webp";
+import threads from "../assets/images/threads.svg"
 
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
@@ -36,11 +37,11 @@ export const content = {
     },
   ],
   hero: {
-    title: "PROFESSIONAL PHOTOGRAPHER",
+    title: "SONKO PORTRAITURE",
     sub_title:
       "Let's savor those unforgettable moments of fun, excitement, and adventure, capturing the highs and depths of",
-    firstName: "SONKO",
-    LastName: "PORTRAITURE",
+    firstName: "PROFESSIONAL",
+    LastName: "PHOTOGRAPHER",
     btnText: "Book Me",
     image: Hero_person,
     imageObject: Hero_object,
@@ -81,31 +82,37 @@ export const content = {
     subtitle: "LET'S GET IN TOUCH",
     contacts: [
       {
-        text: "codeaprogram@gmail.com",
+        text: "sonkohenry94@gmail.com",
         icon: GrMail,
-        link: "mailto:codeaprogram@gmail.com",
+        link: "mailto:sonkohenry94@gmail.com",
+        // link: "mailto:info@sonkoportraiture.com",
       },
       {
-        text: "+91 1234 56778",
+        text: "+971 58 822 8043",
         icon: MdCall,
-        link: "https://wa.me/1234567890",
+        link: "https://wa.me/971588228043?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_",
       },
     ],
     social_media: [
       {
-        text: "facesono",
+        text: "sonko portraiture",
         icon: BsFacebook,
-        link: "https://www.instagram.com/codeaprogram/",
+        link: "https://www.facebook.com/Microsonko/",
       },
       {
-        text: "codeaprogram",
+        text: "sonko_portraiture",
         icon: BsInstagram,
-        link: "https://www.instagram.com/codeaprogram/",
+        link: "https://www.instagram.com/sonko_portraiture/",
       },
+      // {
+      //   text: "codeaprogram",
+      //   icon: threads,
+      //   link: "https://www.instagram.com/codeaprogram/",
+      // },
       {
-        text: "codeapwhatsa",
+        text: "+971 58 822 8043",
         icon: BsWhatsapp,
-        link: "https://www.whatsapp.com/codeaprogram/",
+        link: "https://wa.me/971588228043?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_",
       },
     ],
   },

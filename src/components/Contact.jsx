@@ -13,29 +13,26 @@ const Contact = () => {
     event.preventDefault(); // Prevent the form from submitting
 
     emailjs
-    emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID, // Use the variable directly
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID, // Use the variable directly
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         event.target,
-        process.env.REACT_APP_EMAILJS_USER_ID // Use the variable directly
+        process.env.REACT_APP_EMAILJS_USER_ID
       )
-      .then(
-        function (response) {
-          console.log('Email sent successfully!', response.status, response.text);
-          setIsEmailSent(true); // Set the state to indicate email sent
-          event.target.reset(); // Reset the form
-        }
-      )
+      .then(function (response) {
+        console.log('Email sent successfully!', response.status, response.text);
+        setIsEmailSent(true);
+        event.target.reset();
+      })
       .catch(function (error) {
         console.error('Email sending failed:', error);
-        toast.error('Failed to send email. Please try again.'); // Display an error toast message
+        toast.error('Failed to send email. Please try again.');
       });
   }
 
   return (
     <div id="contact">
-      <img src={paper} className="w-[150vw] -mb-2" alt="" />
+      <img src={paper} className="md:w-[150vw] -mb-1" alt="" />
       <section className="bg-dark_primary lg:py-[7.5rem] md:py-[5rem] py-[3rem] text-white">
         <div className="container px-0 w-[90%] md:w-[80%] h-fit">
           <h4 className="subtitle font-bold text-2xl" data-aos="fade-down">
@@ -43,16 +40,14 @@ const Contact = () => {
           </h4>
           <br />
           <div className="flex gap-8 md:flex-row flex-col">
-            {isEmailSent ? (
-              <p className="text-green-500 mb-2">Email sent successfully!</p>
-            ) : null}
+            {isEmailSent && <p className="text-green-500 mb-2">Email sent successfully!</p>}
             <form
               ref={form}
               onSubmit={sendEmail}
               data-aos="fade-up"
               className="flex-1 flex flex-col gap-3"
+              aria-label="Contact Form"
             >
-              {/* Input Name as same as email js templates values */}
               <input
                 type="text"
                 name="from_name"
@@ -81,7 +76,7 @@ const Contact = () => {
                 Submit
               </button>
             </form>
-            <div className="flex-1 flex flex-col gap-5">
+            <div className="flex-1 flex flex-col gap-5" aria-label="Contact Information">
               {Contact.contacts.map((content, i) => (
                 <div
                   key={i}

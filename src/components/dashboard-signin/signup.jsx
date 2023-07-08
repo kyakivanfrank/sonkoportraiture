@@ -27,7 +27,8 @@ const SignupForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="max-w-sm mx-auto mt-8 p-6 bg-white shadow-md rounded-md">
+        <section className='item-center h-screen'>
+        <form onSubmit={handleSubmit} className="mt-[25vh] max-w-sm mx-auto p-6 bg-white shadow-md rounded-md">
             <h2 className="text-2xl font-semibold mb-6">Sign up</h2>
             <div className="mb-4">
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Name</label>
@@ -69,6 +70,7 @@ const SignupForm = () => {
                 Sign up
             </button>
         </form>
+        </section>
     );
 };
 
