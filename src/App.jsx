@@ -13,6 +13,7 @@ const App = () => {
   const auth = getAuth(app);
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+  console.log(user)
 
   useEffect(() => {
     Aos.init({
@@ -24,8 +25,9 @@ const App = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-        navigate("/dashboard");
+      navigate("/dashboard");
       }
+    
     });
   }, []);
 
@@ -52,7 +54,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<Login onLoginSuccess={handleLoginSuccess} />} />
-          {user && <Route path="/dashboard" element={<Dashboard onLogout={handleLogout} />} />}
+          {user && <Route path="/dashboard" element={  <Dashboard onLogout={handleLogout} />} />}
+          {user === null && <Route path="/dashboard" element={<Login onLoginSuccess={handleLoginSuccess} />} />}
         </Routes>
       </div>
   );

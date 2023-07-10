@@ -4,8 +4,16 @@ import { PlusCircleIcon, PhotoIcon } from '@heroicons/react/24/solid';
 import ImageUploader from '../components/dashboard-gallery/image-upload';
 import { getFirestore, collection, getDocs, onSnapshot } from 'firebase/firestore';
 import app from '../services/firebase';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Toasting from '../components/toasting';
 
 const Dashboard = ({ onLogout }) => {
+    // gallery logic starts here
+    const db = getFirestore(app);
+    const [images, setImages] = useState([]);
+    const [numberOfImages, setNumberOfImages] = useState(0); // Add numberOfImages state
+    const [IsOpen, setIsOpen] = useState(false);
 
   const getCurrentTime = () => {
     const now = new Date();
@@ -13,12 +21,7 @@ const Dashboard = ({ onLogout }) => {
     return timeString;
   };
 
-  // gallery logic starts here
-
-  const db = getFirestore(app);
-  const [images, setImages] = useState([]);
-  const [numberOfImages, setNumberOfImages] = useState(0); // Add numberOfImages state
-  const [IsOpen, setIsOpen] = useState(false);
+  toast.success("Login successful!");
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -43,7 +46,6 @@ const Dashboard = ({ onLogout }) => {
 
     // Fetch images initially
     fetchImages();
-
     // Set up real-time listener for updates
     const unsubscribe = onSnapshot(collection(db, 'gallery'), (snapshot) => {
       const updatedImages = [];
@@ -67,6 +69,8 @@ const Dashboard = ({ onLogout }) => {
   }, [db]);
 
   return (
+    <>
+      <Toasting />
     <div id="dashboard" className="z-[100]">
       <section className="bg-dark_primary py-5 text-white">
         <div className="w-[90%] md:w-[80%] mx-auto">
@@ -137,6 +141,7 @@ const Dashboard = ({ onLogout }) => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -39,17 +39,20 @@ const Login = ({ onLoginSuccess }) => {
       await signInWithEmailAndPassword(auth, email, password)
         .then((userCredentials) => {
           setLoginAuth(userCredentials);
-        })
-        .catch(error => console.log(error));
-
-      setEmail("");
-      setPassword("");
-      // toast.success('You successfully logged in!');
+          setEmail("");
+          setPassword("");
+      toast.success('You successfully logged in!');
       alert('you successfully logged in!');
       onLoginSuccess();
-    } catch (error) {
+        })
+        .catch(error => {
+          console.log(error)
+      toast.error('Check user-name or password!');
+        } 
+          );
+    }
+    catch (error) {
       alert(error);
-      // alert("Login failed. Check your email and password");
     }
   };
 
