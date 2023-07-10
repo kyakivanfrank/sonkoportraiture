@@ -95,6 +95,7 @@ const Login = ({ onLoginSuccess }) => {
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="Email"
+                autoComplete="email"
                 required
                 className="border border-slate-600 p-3 rounded"
                 aria-label="Email"
@@ -107,6 +108,7 @@ const Login = ({ onLoginSuccess }) => {
                     value={password}
                     onChange={handlePasswordChange}
                     placeholder="Password"
+                    autoComplete="current-password"
                     required
                     className="flex-1"
                     aria-label="Password"
