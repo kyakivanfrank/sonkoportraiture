@@ -1,4 +1,5 @@
 // import images
+const cleanPhoneNumber = phoneNumber => phoneNumber.replace("+", "").replace(/\s/g, "");
 import Hero_person from "../assets/images/Hero/hero-sonko.png";
 import Hero_object from "../assets/images/Hero/SonyA7sII1.png";
 
@@ -16,6 +17,10 @@ import { TbLayoutDashboard, TbHome2 } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 
 import { MdOutlinePermContactCalendar } from "react-icons/md";
+
+
+
+const Major_Phone_Number="+971 50 731 4559"
 
 export const content = {
   nav: [
@@ -88,9 +93,9 @@ export const content = {
         // link: "mailto:info@sonkoportraiture.com",
       },
       {
-        text: "+971 58 822 8043",
+        text: Major_Phone_Number,
         icon: MdCall,
-        link: "https://wa.me/971588228043?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_",
+        link: `https://wa.me/${cleanPhoneNumber(Major_Phone_Number)}?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_`,
       },
     ],
     social_media: [
@@ -110,9 +115,9 @@ export const content = {
       //   link: "https://www.instagram.com/codeaprogram/",
       // },
       {
-        text: "+971 58 822 8043",
+        text: Major_Phone_Number,
         icon: BsWhatsapp,
-        link: "https://wa.me/971588228043?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_",
+        link: `https://wa.me/${cleanPhoneNumber(Major_Phone_Number)}?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_`,
       },
     ],
   },
