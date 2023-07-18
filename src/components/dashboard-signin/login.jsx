@@ -15,7 +15,7 @@ const Login = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  const [signupToggle, setsignupToggle] = useState(false);
+  const [signupToggle, setsignupToggle] = useState(false); // signup toggle
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
