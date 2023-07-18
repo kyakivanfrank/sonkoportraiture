@@ -1,24 +1,37 @@
-import React, { createElement, useRef, useState } from "react";
+import React, { createElement, useRef, useState, useEffect } from "react";
 import { content } from "../services/Content";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 import paper from "../assets/images/Hero/paper.svg";
 
 const Contact = () => {
+  const {
+    VITE_REACT_EMAILJS_SERVICE_ID,
+    VITE_REACT_EMAILJS_TEMPLATE_ID,
+    VITE_REACT_EMAILJS_PUBLIC_KEY
+  } = import.meta.env;
+ 
   const { Contact } = content;
   const form = useRef();
   const [isEmailSent, setIsEmailSent] = useState(false);
+
+  useEffect(() => {
+    if (isEmailSent) {
+      const timer = setTimeout(() => {
+        setIsEmailSent(false);
+      }, 10000); 
+      return () => clearTimeout(timer);
+    }
+  }, [isEmailSent]);
+
 
   function sendEmail(event) {
     event.preventDefault(); // Prevent the form from submitting
 
     emailjs
-      .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        event.target,
-        process.env.REACT_APP_EMAILJS_USER_ID
-      )
+      .sendForm(VITE_REACT_EMAILJS_SERVICE_ID, 
+       VITE_REACT_EMAILJS_TEMPLATE_ID, event.target,
+         VITE_REACT_EMAILJS_PUBLIC_KEY)
       .then(function (response) {
         console.log('Email sent successfully!', response.status, response.text);
         setIsEmailSent(true);
@@ -39,8 +52,8 @@ const Contact = () => {
             {Contact.subtitle}
           </h4>
           <br />
+          {isEmailSent && <p className="text-green-500 text-lg mb-2">Email sent successfully!</p>}
           <div className="flex gap-8 md:flex-row flex-col">
-            {isEmailSent && <p className="text-green-500 mb-2">Email sent successfully!</p>}
             <form
               ref={form}
               onSubmit={sendEmail}
@@ -59,7 +72,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="user_email"
-                pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 placeholder="Email Id"
                 required
                 className="border border-slate-600 p-2 rounded"

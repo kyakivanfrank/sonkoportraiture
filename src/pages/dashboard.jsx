@@ -5,7 +5,6 @@ import ImageUploader from '../components/dashboard-gallery/image-upload';
 import { getFirestore, collection, getDocs, onSnapshot } from 'firebase/firestore';
 import app from '../services/firebase';
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Toasting from '../components/toasting';
 
 const Dashboard = ({ onLogout }) => {

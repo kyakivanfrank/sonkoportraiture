@@ -13,7 +13,6 @@ const App = () => {
   const auth = getAuth(app);
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
-  console.log(user)
 
   useEffect(() => {
     Aos.init({
