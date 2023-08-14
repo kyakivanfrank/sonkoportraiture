@@ -1,6 +1,6 @@
 // import images
 const cleanPhoneNumber = phoneNumber => phoneNumber.replace("+", "").replace(/\s/g, "");
-import Hero_person from "../assets/images/Hero/hero-sonko.png";
+import Hero_person from "../assets/images/Hero/sonko_cut_out.webp";
 import Hero_object from "../assets/images/Hero/SonyA7sII1.png";
 
 import pic2 from "../assets/images/Hero/aboutPics/pic1.jpeg"

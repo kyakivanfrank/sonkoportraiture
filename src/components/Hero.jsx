@@ -36,7 +36,7 @@ const Hero = () => {
           </h1>
 
 
-        <div className="w-full h-[18rem] absolute bottom-0 overflow-hidden silhouetteBg "></div>
+        <div className="w-[65%] h-[18rem] absolute left-0 bottom-0 overflow-hidden silhouetteBg  "></div>
 
         <div className="absolute left-[12%] w-[30%] top-[28%]">
           <span className="flex flex-row mb-4">
@@ -83,9 +83,9 @@ const Hero = () => {
 
        
 
-        <div className="md:h-[32rem] absolute right-[30%] z-[20]">
-          <img src={hero.image} data-aos="slide-up" alt="..." className="h-full object-cover" />
-          <img src={hero.imageObject} className="absolute right-[-50%] bottom-0 z-[100] slide-in-left" alt="" />
+        <div className="md:h-[100%] absolute right-[17%] -bottom-2 z-[20]">
+          <img src={hero.image} data-aos="slide-up" alt="sonko henry" className="h-full object-cover" />
+          {/* <img src={hero.imageObject} className="absolute w-[80%] right-[-10%] bottom-0 z-[100] slide-in-left" alt="" /> */}
         </div>
       </div>
     </section>
