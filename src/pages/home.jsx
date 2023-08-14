@@ -29,7 +29,7 @@ const Home = () => {
         </a>
         <Navbar />
         <Hero />
-        {/* <About /> */}
+        <About />
         <Gallery />
         <Contact />
       </div>
