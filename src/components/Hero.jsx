@@ -1,8 +1,12 @@
-import { useEffect, useState, createElement } from "react";
+import { useEffect, createElement } from "react";
 import { content } from "../services/Content";
+import { useState } from "react";
 
 const Hero = () => {
-  const { hero, Contact } = content;
+  
+  const { hero, Contact } =content;
+
+  
 
   const [textList] = useState(['Dubai', 'Abu Dhabi', 'Sharjah', 'the Emirates Gulf']);
   const [currentIndex, setCurrentIndex] = useState(0);
