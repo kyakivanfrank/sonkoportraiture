@@ -12,7 +12,7 @@ const Navbar = () => {
     if (showMenu) {
       const timeoutId = setTimeout(() => {
         setShowMenu(false);
-      }, 10000);
+      }, 5000);
 
       return () => clearTimeout(timeoutId);
     }
