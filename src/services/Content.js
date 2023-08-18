@@ -3,10 +3,12 @@ const cleanPhoneNumber = phoneNumber => phoneNumber.replace("+", "").replace(/\s
 import Hero_person from "../assets/images/Hero/sonko_cut_out.webp";
 import Hero_object from "../assets/images/Hero/SonyA7sII1.png";
 
-import pic2 from "../assets/images/Hero/aboutPics/pic1.jpeg"
-import pic1 from "../assets/images/Hero/aboutPics/pic1.jfif"
-import pic3 from "../assets/images/Hero/aboutPics/baby_showers.webp"
-import person_project from "../assets/images/Hero/aboutImage.webp";
+
+import about_smiling from "../assets/images/Hero/aboutPics/smiling_lady.webp"
+import about_wedding from "../assets/images/Hero/aboutPics/wedding.webp"
+import about_beauty from "../assets/images/Hero/aboutPics/african_beauty.webp"
+
+
 import threads from "../assets/images/threads.svg"
 
 // import icons from react-icons
@@ -61,28 +63,47 @@ export const content = {
       },
     ],
   },
-  Projects: {
-    title: "MY WORK PROCESS",
-    subtitle: "MY CREATION",
-    image: person_project,
-    project_content: [
+  // projects: {
+  //   title: "MY WORK PROCESS",
+  //   subtitle: "MY CREATION",
+  //   image: person_project,
+  //   project_content: [
+  //     {
+  //       title: "Photography Journey",
+  //       sub_title: "Capture the essence of life through the lens. Explore the world of photography and unleash your creativity. From landscapes to portraits, every click tells a unique story.",
+  //       image: pic1
+  //     },
+  //     {
+  //       title: "The Art of Visual Storytelling",
+  //       sub_title: "Photography is a language that speaks directly to the heart. With each frame, you have the power to evoke emotions, freeze moments, and preserve memories for a lifetime.",
+  //       image: pic2
+  //     },
+  //     {
+  //       title: "Through the Lens of Imagination",
+  //       sub_title: "Step into a world of infinite possibilities. Photography is not just about capturing what's in front of you; it's about seeing beyond the ordinary and embracing the extraordinary.",
+  //       image: pic3
+  //     }
+  //   ],
+  // },
+  about: {
+    about_name:"sonko portraiture",
+    about_title:"Dubai Unveiled: Through the Lens of ",
+    about_description: "Sonko portraiture, a Ugandan photographer in Dubai, masterfully captures the city's vibrancy, blending his African roots with Dubai's dynamic energy. Through his lens, cultural narratives unfold, from serene desert landscapes to bustling streets. Sonko portraiture's photos vividly tell stories, bridging continents and connecting people through his artistry.",
+    about_images:[
       {
-        title: "Photography Journey",
-        sub_title: "Capture the essence of life through the lens. Explore the world of photography and unleash your creativity. From landscapes to portraits, every click tells a unique story.",
-        image: pic1
+        "imageUrl": about_beauty,
+        "imageDesc": "Capturing those happy moments."
       },
-      {
-        title: "The Art of Visual Storytelling",
-        sub_title: "Photography is a language that speaks directly to the heart. With each frame, you have the power to evoke emotions, freeze moments, and preserve memories for a lifetime.",
-        image: pic2
-      },
-      {
-        title: "Through the Lens of Imagination",
-        sub_title: "Step into a world of infinite possibilities. Photography is not just about capturing what's in front of you; it's about seeing beyond the ordinary and embracing the extraordinary.",
-        image: pic3
+      // {
+      //   "imageUrl": about_wedding,
+      //   "imageDesc": "The Love of your life"
+      // },
+       {
+        "imageUrl": about_smiling,
+        "imageDesc": "Nothing shouts louder than a great smile."
       }
-    ],
-  },
+    ]
+    },
   Contact: {
     subtitle: "LET'S GET IN TOUCH",
     contacts: [

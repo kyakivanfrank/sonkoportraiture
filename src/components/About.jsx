@@ -1,85 +1,90 @@
 import { useState, useEffect } from "react";
 import { content } from "../services/Content";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper";
+import { BsWhatsapp } from "react-icons/bs";
+import cameraImg from "../assets/images/camera_placeholder.jpg"
+
+const placeholder = {
+  imageUrl: cameraImg,
+  imageDesc:"Great technique with high-end gear"
+}
+
+import { createElement } from "react";
 
 const About = () => {
-  const { Projects } = content;
+  const { about } = content;
+
 
   const [shuffledProContent, setShuffledProContent] = useState([]);
 
   useEffect(() => {
     const shuffleInterval = setInterval(() => {
-      const shuffledContent = Projects.project_content
+      const shuffledImages = about.about_images
         .map((value) => ({ value, sort: Math.random() }))
         .sort((a, b) => a.sort - b.sort)
         .map(({ value }) => value);
 
-      setShuffledProContent(shuffledContent);
-    }, 10000);
+      setShuffledProContent(shuffledImages);
+    }, 5000);
 
     return () => {
       clearInterval(shuffleInterval);
     };
-  }, [Projects.project_content]);
+  }, [about.about_images]);
+
+
 
   return (
-    <section className="bg-bg_light_primary overflow-y-hidden relative" id="about">
-      <div className="container px-0 w-[90%] md:w-[80%] py-[5rem] flex flex-col justify-between">
-        <div>
-         <h4 className=" font-bold text-2xl" data-aos="fade-down">
-            {Projects.title}
-          </h4>
-          <br />
-        </div>
-        <img
-          src={Projects.image}
-          alt="..."
-          data-aos="fade-right"
-          className="absolute bottom-0 h-[100%] -mb-[10rem] z-[20] "
-        />
 
-        <div className="flex items-center lg:flex-row flex-col-reverse gap-5">
-          <Swiper
-            pagination={{ clickable: true }}
-            data-aos="fade-left"
-            spaceBetween={20}
-            modules={[Pagination]}
-            className="rounded-3xl pb-16 max-w-full drop-shadow-primary self-start"
-          >
-            {shuffledProContent.map(({ sub_title, title, image }, index) => (
-              <SwiperSlide
-                key={index}
-                className="bg-white rounded-[0.5rem] p-4 border-b-2 object-contain border-[#FAF9FD] h-fit"
-              >
-                <span
-                  style={{ backdropFilter: "blur(20px)" }}
-                  data-aos="fade-right"
-                  className="absolute rounded-md right-[4rem] bg-[#05050591] text-white w-[50%] bottom-[8rem] text-2xl p-[20px]"
-                >
-                  {sub_title}
-                </span>
-                <img
-                  src={image}
-                  className="w-full rounded-[0.5rem] object-cover h-[400px]"
-                  alt="..."
-                />
-                <div className="flex flex-col gap-1 mt-2">
-                  <h5 className="font-bold font-Poppins text-2xl text-right">
-                    {title}
-                  </h5>
-                  <button className="font-bold text-gray self-end">
-                    READ MORE
-                  </button>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
+    <section className="bg-[#5452520c] dark:bg-gray-900" id="about">
+    <div className="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
+
+
+    <div className="justify-center xl:w-1/2 py-0 md:py-10 ">
+      <div className="relative h-80 w-80 sm:w-[28rem] left-0 mx-auto sm:h-[28rem] overflow-x-clip flex ">
+        {shuffledProContent.length === 0 ? 
+        <>
+          <span className="absolute w-48 px-4 py-2 rounded-lg  bg-[white]/30 backdrop-blur bottom-[1rem] shadow-md right-[23px]">{placeholder.imageDesc}</span>
+         <img
+         className="flex-shrink-0 object-cover w-full rounded-full"
+         src={placeholder.imageUrl}
+         alt={`Image`}
+       />
+        </>
+        :
+        shuffledProContent.map(({imageUrl, imageDesc}, index) => (
+          <>
+          <span className="absolute w-48 px-4 py-2 rounded-lg  bg-[white]/30 backdrop-blur bottom-[1rem] shadow-md  right-[23px]">{imageDesc}</span>
+          <img
+            className="flex-shrink-0 object-cover mr-10 w-full rounded-full"
+            src={imageUrl}
+            alt={`Image ${index + 1}`}
+          />
+          </>
+        ))
+       }
       </div>
-    </section>
+    </div>
+
+        <div className="flex flex-col items-center md:text-left mt-6 xl:items-start text-center xl:w-1/2 xl:mt-0">
+           
+            <h2 className="text-2xl font-semibold tracking-tight text-gray-800 xl:text-3xl dark:text-white">
+                {about.about_title} <span className="text-blue-500">{about.about_name}</span>
+            </h2>
+            <p className="block max-w-2xl mt-4 text-gray-500 dark:text-gray-300">{about.about_description} </p>
+
+            <div className="inline-flex w-full mt-6 sm:w-auto">
+            <a href="https://wa.me/971507314559?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_" 
+            className="inline-flex justify-center w-full px-6 py-2 text-white duration-300 bg-black items-center rounded-lg hover:bg-[green] focus:ring focus:ring-[green] focus:ring-opacity-80">
+            <h4 className="text-white mr-2">{createElement(BsWhatsapp)}</h4>  contact me
+            </a>
+        </div>
+        </div>
+    </div>
+
+
+</section>
+
+
   );
 };
 

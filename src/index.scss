@@ -68,8 +68,7 @@
 
 @layer utilities {
   .btn {
-    @apply py-2 px-9 border-2 rounded-md
-     border-dark_primary rounded-br-3xl font-medium;
+    @apply py-3 px-9 border-2 rounded-full border-dark_primary md:rounded-br-3xl font-medium;
   }
   .title {
     @apply md:text-3xl text-2xl;
