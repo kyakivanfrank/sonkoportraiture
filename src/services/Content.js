@@ -1,7 +1,7 @@
 // import images
 const cleanPhoneNumber = phoneNumber => phoneNumber.replace("+", "").replace(/\s/g, "");
 import Hero_person from "../assets/images/Hero/sonko_cut_out.webp";
-import Hero_object from "../assets/images/Hero/SonyA7sII1.png";
+// import Hero_object from "../assets/images/Hero/SonyA7sII1.png";
 
 
 import about_smiling from "../assets/images/Hero/aboutPics/smiling_lady.webp"
@@ -51,7 +51,7 @@ export const content = {
     LastName: "PHOTOGRAPHER",
     btnText: "Book Me",
     image: Hero_person,
-    imageObject: Hero_object,
+    // imageObject: Hero_object,
     hero_content: [
       {
         count: "8+",
@@ -94,10 +94,10 @@ export const content = {
         "imageUrl": about_beauty,
         "imageDesc": "Capturing those happy moments."
       },
-      // {
-      //   "imageUrl": about_wedding,
-      //   "imageDesc": "The Love of your life"
-      // },
+      {
+        "imageUrl": about_wedding,
+        "imageDesc": "The Love of your life"
+      },
        {
         "imageUrl": about_smiling,
         "imageDesc": "Nothing shouts louder than a great smile."
