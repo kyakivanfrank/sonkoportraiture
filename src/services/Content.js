@@ -22,7 +22,8 @@ import { MdOutlinePermContactCalendar } from "react-icons/md";
 
 
 
-const Major_Phone_Number="+971 50 731 4559"
+const Major_Phone_Number2="+971 50 731 4559"
+const Major_Phone_Number="+971 58 822 8043"
 
 export const content = {
   nav: [
@@ -114,9 +115,9 @@ export const content = {
         // link: "mailto:info@sonkoportraiture.com",
       },
       {
-        text: Major_Phone_Number,
+        text: Major_Phone_Number2,
         icon: MdCall,
-        link: `https://wa.me/${cleanPhoneNumber(Major_Phone_Number)}?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_`,
+        link: `https://wa.me/${cleanPhoneNumber(Major_Phone_Number2)}?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_`,
       },
     ],
     social_media: [
@@ -130,11 +131,7 @@ export const content = {
         icon: BsInstagram,
         link: "https://www.instagram.com/sonko_portraiture/",
       },
-      // {
-      //   text: "codeaprogram",
-      //   icon: threads,
-      //   link: "https://www.instagram.com/codeaprogram/",
-      // },
+     
       {
         text: Major_Phone_Number,
         icon: BsWhatsapp,
