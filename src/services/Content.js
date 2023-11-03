@@ -14,7 +14,7 @@ import threads from "../assets/images/threads.svg"
 // import icons from react-icons
 import { GrMail } from "react-icons/gr";
 import { MdCall } from "react-icons/md";
-import { BsInstagram, BsFacebook, BsWhatsapp } from "react-icons/bs";
+import { BsInstagram, BsFacebook, BsWhatsapp} from "react-icons/bs";
 import { TbLayoutDashboard, TbHome2 } from "react-icons/tb";
 import { BiUser } from "react-icons/bi";
 
@@ -50,7 +50,7 @@ export const content = {
       "Let's savor those unforgettable moments of fun, excitement, and adventure, capturing the highs and depths of",
     firstName: "PROFESSIONAL",
     LastName: "PHOTOGRAPHER",
-    btnText: "Book Me",
+    btnText: "Book Us",
     image: Hero_person,
     // imageObject: Hero_object,
     hero_content: [
@@ -64,28 +64,7 @@ export const content = {
       },
     ],
   },
-  // projects: {
-  //   title: "MY WORK PROCESS",
-  //   subtitle: "MY CREATION",
-  //   image: person_project,
-  //   project_content: [
-  //     {
-  //       title: "Photography Journey",
-  //       sub_title: "Capture the essence of life through the lens. Explore the world of photography and unleash your creativity. From landscapes to portraits, every click tells a unique story.",
-  //       image: pic1
-  //     },
-  //     {
-  //       title: "The Art of Visual Storytelling",
-  //       sub_title: "Photography is a language that speaks directly to the heart. With each frame, you have the power to evoke emotions, freeze moments, and preserve memories for a lifetime.",
-  //       image: pic2
-  //     },
-  //     {
-  //       title: "Through the Lens of Imagination",
-  //       sub_title: "Step into a world of infinite possibilities. Photography is not just about capturing what's in front of you; it's about seeing beyond the ordinary and embracing the extraordinary.",
-  //       image: pic3
-  //     }
-  //   ],
-  // },
+
   about: {
     about_name:"sonko portraiture",
     about_title:"Dubai Unveiled: Through the Lens of ",

@@ -75,7 +75,7 @@ const About = () => {
             <div className="inline-flex w-full mt-6 sm:w-auto">
             <a href="https://wa.me/971507314559?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_" 
             className="inline-flex justify-center w-full px-6 py-2 text-white duration-300 bg-black items-center rounded-lg hover:bg-[green] focus:ring focus:ring-[green] focus:ring-opacity-80">
-            <h4 className="text-white mr-2">{createElement(BsWhatsapp)}</h4>  contact me
+            <h4 className="text-white mr-2">{createElement(BsWhatsapp)}</h4>  contact us
             </a>
         </div>
         </div>
