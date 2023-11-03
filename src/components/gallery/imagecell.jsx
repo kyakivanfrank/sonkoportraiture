@@ -1,55 +1,44 @@
-import React, { useState } from 'react';
-import { HeartIcon } from '@heroicons/react/24/solid';
+import React from "react";
+import { HeartIcon } from "@heroicons/react/24/solid";
 
 const Imagecell = ({ img, caption, number }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  // const [isHovered, setIsHovered] = useState(false);
 
-  const handleTouchStart = () => {
-    if (window.innerWidth <= 768) {
-      document.getElementById('image_cell').style.transform = 'scale(1.2)';
-      document.getElementById('image_cell').style.zIndex = 50;
-    }
-  };
+  // const handleTouchStart = () => {
+  //   if (window.innerWidth <= 768) {
+  //     document.getElementById("image_cell").style.transform = "scale(1.2)";
+  //     document.getElementById("image_cell").style.zIndex = 50;
+  //   }
+  // };
 
-  const handleTouchEnd = () => {
-    if (window.innerWidth <= 768) {
-      document.getElementById('image_cell').style.transform = 'scale(1)';
-      document.getElementById('image_cell').style.zIndex = 'auto';
-    }
-  };
+  // const handleTouchEnd = () => {
+  //   if (window.innerWidth <= 768) {
+  //     document.getElementById("image_cell").style.transform = "scale(1)";
+  //     document.getElementById("image_cell").style.zIndex = "auto";
+  //   }
+  // };
 
-  const handleMouseEnter = () => {
-    if (window.innerWidth > 768) {
-      setIsHovered(true);
-    }
-  };
+  // const handleMouseEnter = () => {
+  //   if (window.innerWidth > 768) {
+  //     setIsHovered(true);
+  //   }
+  // };
 
-  const handleMouseLeave = () => {
-    if (window.innerWidth > 768) {
-      setIsHovered(false);
-    }
-  };
+  // const handleMouseLeave = () => {
+  //   if (window.innerWidth > 768) {
+  //     setIsHovered(false);
+  //   }
+  // };
 
-  const imageCellStyles = {
-    transform: isHovered ? 'scale(1.2)' : 'scale(1)',
-    zIndex: isHovered ? 50 : 'auto',
-    padding: isHovered ? '4px' : 'none',
-  };
-
+  // const imageCellStyles = {
+  //   transform: isHovered ? "scale(1.2)" : "scale(1)",
+  //   zIndex: isHovered ? 50 : "auto",
+  //   padding: isHovered ? "4px" : "none",
+  // };
   return (
-    <div
-      id="image_cell"
-      data-aos="fade-up"
-      data-aos-delay={number * 5} // Adjusted to faster transition (decreased delay)
-      className="relative h-fit mx-[4px] mb-[8px] break-inside-avoid"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      style={imageCellStyles}
-    >
+    <div className="relative h-fit mx-[4px] mb-[8px] break-inside-avoid">
       <img
-        className="rounded-md grayscale-[75%] w-full hover:grayscale-0 transition-transform duration-300" // Adjusted transition duration
+        className="rounded-md grayscale-75  w-full transition-all duration-300" // Adjusted transition duration
         loading="lazy"
         src={img}
         alt={caption}

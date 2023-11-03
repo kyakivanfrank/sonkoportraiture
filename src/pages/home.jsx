@@ -7,6 +7,7 @@ import Navbar from "../Layouts/Navbar";
 import { content } from "../services/Content";
 import { createElement } from "react";
 
+
 const Home = () => {
   const { icon, link } = content.Contact.social_media[2];
 
@@ -26,8 +27,10 @@ const Home = () => {
             {createElement(icon)}
           </h3>
         </a>
+
         <Navbar />
         <Hero />
+       
         <About />
         <Gallery />
         <Contact />

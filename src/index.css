@@ -98,4 +98,22 @@
 .round {
   border-radius: 100px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.rounded-md.grayscale-75 {
+  filter: grayscale(75%);
+}
+
+@media (hover: hover) {
+  .rounded-md.grayscale-75:hover {
+    filter: grayscale(0);
+  }
+}
+@media (max-width: 768px) {
+  .rounded-md.grayscale-75 {
+    filter: grayscale(0);
+  }
+  .rounded-md.grayscale-75:in-viewport {
+    filter: grayscale(75%);
+  }
 }/*# sourceMappingURL=index.css.map */
