@@ -24,6 +24,8 @@ const Gallery = () => {
           id: doc.id,
           img: doc.data().url,
           caption: doc.data().name,
+          date: doc.data().date
+
         }));
         setImages(fetchedImages);
       } catch (error) {
@@ -70,7 +72,12 @@ const Gallery = () => {
             />
           </div>
         ) : visibleImages.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-0">
+          <div className={
+            visibleImages.length > 0
+              ? `columns-2 md:columns-3 gap-0 lg:columns-4`
+              : `columns-1 md:columns-2 gap-2`
+          }
+          >
             {visibleImages.map(({ id, img, caption }, index) => (
               <Imagecell
                 key={id}
@@ -89,7 +96,6 @@ const Gallery = () => {
             </p>
           </div>
         )}
-
         {!showAllImages && images.length > 8 && (
           <div className="flex justify-center items-center mt-10">
             <button
@@ -100,6 +106,9 @@ const Gallery = () => {
             </button>
           </div>
         )}
+
+
+
       </div>
     </div>
   );

@@ -43,11 +43,12 @@ const ImageUploader = ({ IsOpen, setIsOpen, images }) => {
               const imageDocRef = doc(collection(db, 'gallery'));
               const data = {
                 name: imageFile.name,
+                date: Date(),
                 url: downloadURL
               };
               setDoc(imageDocRef, data)
                 .then(() => {
-                  console.log('Image uploaded to Firestore successfully!');
+                  console.log('Image uploaded to Firestore successfully! and date()');
                 })
                 .catch((error) => {
                   console.error('Error uploading image to Firestore:', error);

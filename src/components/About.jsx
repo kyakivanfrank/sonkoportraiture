@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { content } from "../services/Content";
 import { BsWhatsapp } from "react-icons/bs";
 import cameraImg from "../assets/images/camera_placeholder.jpg"
@@ -52,14 +52,14 @@ const About = () => {
         </>
         :
         shuffledProContent.map(({imageUrl, imageDesc}, index) => (
-          <>
+          <Fragment key={index}>
           <span className="absolute w-48 px-4 py-2 rounded-lg  bg-[white]/30 backdrop-blur bottom-[1rem] shadow-md  right-[23px]">{imageDesc}</span>
           <img
             className="flex-shrink-0 object-cover mr-10 w-full rounded-full"
             src={imageUrl}
             alt={`Image ${index + 1}`}
           />
-          </>
+          </Fragment>
         ))
        }
       </div>

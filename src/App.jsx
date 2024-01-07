@@ -8,6 +8,8 @@ import Dashboard from "./pages/dashboard";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./services/firebase";
 import { useNavigate } from "react-router-dom";
+import Toasting from "./components/toasting";
+
 
 const App = () => {
   const auth = getAuth(app);
@@ -24,9 +26,8 @@ const App = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
-      navigate("/dashboard");
+        navigate("/dashboard");
       }
-    
     });
   }, []);
 
@@ -49,14 +50,30 @@ const App = () => {
   };
 
   return (
+    <>
+      <Toasting />
       <div className="relative">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/admin" element={<Login onLoginSuccess={handleLoginSuccess} />} />
-          {user && <Route path="/dashboard" element={  <Dashboard onLogout={handleLogout} />} />}
-          {user === null && <Route path="/dashboard" element={<Login onLoginSuccess={handleLoginSuccess} />} />}
+          <Route
+            path="/admin"
+            element={<Login onLoginSuccess={handleLoginSuccess} />}
+          />
+          {user && (
+            <Route
+              path="/dashboard"
+              element={<Dashboard onLogout={handleLogout} />}
+            />
+          )}
+          {user === null && (
+            <Route
+              path="/dashboard"
+              element={<Login onLoginSuccess={handleLoginSuccess} />}
+            />
+          )}
         </Routes>
       </div>
+    </>
   );
 };
 

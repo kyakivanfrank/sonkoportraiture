@@ -10,10 +10,12 @@ import {
 } from "firebase/firestore";
 import app from "../services/firebase";
 import { toast } from "react-toastify";
-import Toasting from "../components/toasting";
 
 const Dashboard = ({ onLogout }) => {
-  // gallery logic starts here
+  useEffect(() => {
+    toast.success("Login successful!");
+  }, []);
+
   const db = getFirestore(app);
   const [images, setImages] = useState([]);
   const [numberOfImages, setNumberOfImages] = useState(0); // Add numberOfImages state
@@ -24,8 +26,6 @@ const Dashboard = ({ onLogout }) => {
     const timeString = now.toLocaleTimeString([], { timeStyle: "short" });
     return timeString;
   };
-
-  toast.success("Login successful!");
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -58,8 +58,8 @@ const Dashboard = ({ onLogout }) => {
           id: doc.id,
           img: doc.data().url,
           caption: doc.data().name,
+          date: doc.data().date,
         };
-
         updatedImages.push(data);
       });
       setImages(updatedImages);
@@ -74,7 +74,6 @@ const Dashboard = ({ onLogout }) => {
 
   return (
     <>
-      <Toasting />
       <div id="dashboard" className="z-[100]">
         <section className="bg-dark_primary py-5 text-white">
           <div className="w-[90%] md:w-[80%] mx-auto">
