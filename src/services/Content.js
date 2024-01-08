@@ -22,7 +22,7 @@ import { MdOutlinePermContactCalendar } from "react-icons/md";
 
 
 const Major_Phone_Number2="+971 50 731 4559"
-const Major_Phone_Number="+971 58 822 8043"
+const Major_Phone_Number="+971 52 273 9772"
 
 export const content = {
   nav: [

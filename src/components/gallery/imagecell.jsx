@@ -38,7 +38,7 @@ const Imagecell = ({ img, caption, number }) => {
   return (
     <div className="relative h-fit mx-[4px] mb-[8px] break-inside-avoid">
       <img
-        className="rounded-md grayscale-75  w-full transition-all duration-300" // Adjusted transition duration
+        className="rounded-md grayscale-75 w-full transition-all duration-300" // Adjusted transition duration
         loading="lazy"
         src={img}
         alt={caption}

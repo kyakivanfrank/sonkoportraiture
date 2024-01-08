@@ -24,8 +24,7 @@ const Gallery = () => {
           id: doc.id,
           img: doc.data().url,
           caption: doc.data().name,
-          date: doc.data().date
-
+          date: doc.data().date,
         }));
         setImages(fetchedImages);
       } catch (error) {
@@ -72,11 +71,12 @@ const Gallery = () => {
             />
           </div>
         ) : visibleImages.length > 0 ? (
-          <div className={
-            visibleImages.length > 0
-              ? `columns-2 md:columns-3 gap-0 lg:columns-4`
-              : `columns-1 md:columns-2 gap-2`
-          }
+          <div
+            className={
+              visibleImages.length > 0
+                ? `columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-0 `
+                : `columns-1 md:columns-2 gap-2`
+            }
           >
             {visibleImages.map(({ id, img, caption }, index) => (
               <Imagecell
@@ -106,9 +106,6 @@ const Gallery = () => {
             </button>
           </div>
         )}
-
-
-
       </div>
     </div>
   );
