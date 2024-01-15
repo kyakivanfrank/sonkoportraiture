@@ -93,9 +93,9 @@ export const content = {
         // link: "mailto:info@sonkoportraiture.com",
       },
       {
-        text: Major_Phone_Number2,
+        text: Major_Phone_Number,
         icon: MdCall,
-        link: `https://wa.me/${cleanPhoneNumber(Major_Phone_Number2)}?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_`,
+        link: `https://wa.me/${cleanPhoneNumber(Major_Phone_Number)}?text=_This%20is%20an%20automatic%20message%20from%20sonkoportraiture.com_`,
       },
     ],
     social_media: [

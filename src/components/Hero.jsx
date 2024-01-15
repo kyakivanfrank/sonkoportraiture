@@ -3,10 +3,7 @@ import { content } from "../services/Content";
 import { useState } from "react";
 
 const Hero = () => {
-  
   const { hero, Contact } =content;
-
-  
 
   const [textList] = useState(['Dubai', 'Abu Dhabi', 'Sharjah', 'the Emirates Gulf']);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,7 +36,7 @@ const Hero = () => {
           </h1>
 
 
-        <div className="w-[65%] md:h-[18rem] absolute left-0 bottom-0 overflow-hidden  silhouetteBg  "></div>
+        <div className="w-[65%] md:h-[18rem] absolute left-0 bottom-0 overflow-hidden silhouetteBg "></div>
 
         <div className="absolute left-2 h-[100vh] md:h-fit md:left-[12%]  md:w-[30%] w-[95%] z-100 top-2 md:top-[28%]">
           <span className=" flex-row hidden md:flex mb-4">
@@ -69,26 +66,19 @@ const Hero = () => {
           </h4>
           <br />
           <div className="flex w-[75vw] md:w-fit bottom-20  justify-start absolute md:static md:mt-0 ">
-            <button id="book-me" className="btn w-full md:my-4  md:w-fit bg-dark_primary text-white md:bg-white md:text-dark_primary  md:hover:bg-dark_primary   md:hover:text-white" onClick={handleBookMeClick}>
+            <button id="book-me" className="btn w-full md:my-4  md:w-fit bg-dark_primary text-white md:bg-white md:text-dark_primary  md:hover:bg-dark_primary  z-50 md:hover:text-white" onClick={handleBookMeClick}>
               {hero.btnText}
             </button>
           </div>
           <div className="flex flex-col gap-10 mt-10"></div>
         </div>
 
-
-
         <div data-aos="slide-left"
-          className="absolute h-full w-3/12 md:w-3/12 lg:w-4/12   top-0 right-0 bg-primaryLinear bottom-0 -z-10 flex -pr-[25%] items-center justify-end">
-          
+          className="absolute h-full w-3/12 md:w-3/12 lg:w-4/12  top-0 right-0 bg-primaryLinear bottom-0 -z-10 flex -pr-[25%] items-center justify-end">
         </div>
 
-
-       
-
         <div className="h-screen absolute right-0 md:w-[30%] lg:w-[53%] z-[20]">
-          <img src={hero.image} data-aos="slide-left" data-aos-delay="100" alt="sonko henry" className="h-[60vh] overflow-visible mt-[22vh] ml-[30%] md:ml-0 md:mt-0 md:h-full object-cover" />
-          {/* <img src={hero.imageObject} className="absolute w-[80%] right-[-10%] bottom-0 z-[100] slide-in-left" alt="" /> */}
+          <img src={hero.image} data-aos="slide-left" data-aos-delay="100" alt="sonko henry" className="h-[75vh] overflow-visible mt-[25vh] ml-[4%] md:ml-0 md:mt-0 md:h-full object-cover" />
         </div>
       </div>
     </section>

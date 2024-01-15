@@ -16,18 +16,6 @@ const Home = () => {
   return (
     <>
       <div className="relative">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bottom-5 fixed right-5"
-          aria-label="Social Media Link"
-        >
-          <h3 className="bg-[green] z-100 p-[1rem] md:p-[1.2rem] round text-white text-[1.5rem] md:text-[2rem]">
-            {createElement(icon)}
-          </h3>
-        </a>
-
         <Navbar />
         <Hero />
        

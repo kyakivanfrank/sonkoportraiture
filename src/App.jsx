@@ -9,12 +9,17 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import app from "./services/firebase";
 import { useNavigate } from "react-router-dom";
 import Toasting from "./components/toasting";
+import { createElement } from "react";
 
+import { content } from "./services/Content";
 
 const App = () => {
   const auth = getAuth(app);
   const navigate = useNavigate();
   const [user, setUser] = useState(null);
+
+  const { icon, link } = content.Contact.social_media[2];
+
 
   useEffect(() => {
     Aos.init({
@@ -51,6 +56,18 @@ const App = () => {
 
   return (
     <>
+       <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bottom-5 fixed right-5 z-[999]"
+          aria-label="Social Media Link"
+
+        >
+          <h3 className="bg-[green]  p-[1rem] md:p-[1.2rem] round text-white text-[1.5rem] md:text-[2rem]">
+            {createElement(icon)}
+          </h3>
+        </a>
       <Toasting />
       <div className="relative">
         <Routes>
